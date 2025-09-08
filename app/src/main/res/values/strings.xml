@@ -2,4 +2,11 @@
     <string name="app_name">Android Assessment</string>
     <string name="_220_followers">220 Followers</string>
     <string name="_150_following">150 Following</string>
+    <string name="_220">220</string>
+    <string name="followers">Followers</string>
+    <string name="_140">140</string>
+    <string name="following">Following</string>
+    <string name="dot">•</string>
+    <string name="_0_shots">0 shots</string>
+    <string name="_10_collections">10 Collections</string>
 </resources>

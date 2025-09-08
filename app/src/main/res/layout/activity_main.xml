@@ -6,16 +6,33 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@drawable/bg_assign"
+    android:background="@color/transparent"
     tools:context=".ui.MainActivity">
+
+ <com.airbnb.lottie.LottieAnimationView
+     android:id="@+id/progressBar"
+     android:layout_width="wrap_content"
+     android:layout_height="300dp"
+     android:layout_centerInParent="true"
+     app:lottie_autoPlay="true"
+     app:lottie_loop="true"
+     app:lottie_rawRes="@raw/loading"
+     android:visibility="visible"/>
+
+ <RelativeLayout
+     android:id="@+id/mainContent"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:padding="14dp"
+     android:background="@drawable/bg_final"
+     android:visibility="gone">
 
  <TextView
      android:id="@+id/tvUsername"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content"
      android:textSize="18sp"
-     android:textColor="@color/black"
+     android:textColor="@color/white"
      android:layout_alignParentTop="true"
      android:layout_centerHorizontal="true"
      android:layout_marginTop="30dp"/>
@@ -28,7 +45,8 @@
      android:layout_alignParentTop="true"
      android:layout_alignParentEnd="true"
      android:layout_marginTop="30dp"
-     android:layout_marginEnd="20dp"/>
+     android:layout_marginEnd="20dp"
+     app:tint="@color/white" />
 
  <ImageView
      android:id="@+id/ivAvatar"
@@ -36,7 +54,7 @@
      android:layout_height="100dp"
      android:layout_below="@id/tvUsername"
      android:layout_centerHorizontal="true"
-     android:layout_marginTop="85dp"
+     android:layout_marginTop="70dp"
      android:scaleType="centerCrop"/>
 
  <TextView
@@ -84,7 +102,7 @@
        android:id="@+id/tvFollowers"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="220"
+       android:hint="@string/_220"
        android:textSize="18sp"
        android:layout_marginEnd="8dp"
        android:textStyle="bold"
@@ -94,7 +112,7 @@
        android:id="@+id/tvFollowersLabel"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="Followers"
+       android:text="@string/followers"
        android:textSize="14sp"
        android:textColor="#666666"/>
   </LinearLayout>
@@ -110,7 +128,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_marginEnd="8dp"
-       android:text="140"
+       android:hint="@string/_140"
        android:textSize="18sp"
        android:textStyle="bold"
        android:textColor="@color/black"/>
@@ -119,7 +137,7 @@
        android:id="@+id/tvFollowingLabel"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="Following"
+       android:text="@string/following"
        android:textSize="14sp"
        android:textColor="#666666"/>
   </LinearLayout>
@@ -139,24 +157,28 @@
       android:layout_width="35dp"
       android:layout_height="40dp"
       android:layout_marginEnd="10dp"
+      android:focusable="true"
       app:lottie_autoPlay="true"
       app:lottie_loop="true"
+      android:clickable="true"
       app:lottie_rawRes="@raw/browse" />
 
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:textColor="@color/blue"
-      android:text="•"
+      android:text="@string/dot"
       android:textSize="20sp"
       android:textStyle="bold"/>
 
   <com.airbnb.lottie.LottieAnimationView
-      android:id="@+id/animation_instagram"
+      android:id="@+id/anm_instagram"
       android:layout_width="40dp"
       android:layout_height="40dp"
       android:layout_marginEnd="10dp"
       android:layout_marginStart="10dp"
+      android:clickable="true"
+      android:focusable="true"
       app:lottie_autoPlay="true"
       app:lottie_loop="true"
       app:lottie_rawRes="@raw/instagram" />
@@ -165,12 +187,12 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:textColor="@color/blue"
-      android:text="•"
+      android:text="@string/dot"
       android:textSize="20sp"
       android:textStyle="bold"/>
   
   <com.airbnb.lottie.LottieAnimationView
-      android:id="@+id/animation_facebook"
+      android:id="@+id/anm_facebook"
       android:layout_width="40dp"
       android:layout_height="40dp"
       android:layout_marginEnd="10dp"
@@ -182,12 +204,12 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:textColor="@color/blue"
-      android:text="•"
+      android:text="@string/dot"
       android:textSize="20sp"
       android:textStyle="bold"/>
   
   <com.airbnb.lottie.LottieAnimationView
-      android:id="@+id/animation_twitter"
+      android:id="@+id/anm_twitter"
       android:layout_width="40dp"
       android:layout_height="40dp"
       android:layout_marginEnd="10dp"
@@ -200,11 +222,11 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:textColor="@color/blue"
-      android:text="•"
+      android:text="@string/dot"
       android:textSize="20sp"
       android:textStyle="bold"/>
   <com.airbnb.lottie.LottieAnimationView
-      android:id="@+id/animation_github"
+      android:id="@+id/anm_github"
       android:layout_width="40dp"
       android:layout_height="40dp"
       android:layout_marginStart="10dp"
@@ -215,6 +237,7 @@
  </LinearLayout>
 
  <LinearLayout
+     android:id="@+id/shotsAndCollectionBtn"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:orientation="horizontal"
@@ -223,34 +246,35 @@
      android:gravity="center">
 
   <com.google.android.material.button.MaterialButton
-      android:id="@+id/my_button"
+      android:id="@+id/tvShots"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_weight="1"
-      android:text="Button 1"
+      android:text="@string/_0_shots"
       app:cornerRadius="8dp"
       android:textColor="@color/blue"
       app:backgroundTint="@color/light_blue"
-      app:rippleColor="@color/black"
-      android:layout_marginEnd="8dp"/>
+      app:rippleColor="@color/black" />
 
   <com.google.android.material.button.MaterialButton
-      android:id="@+id/my"
+      android:id="@+id/tvCollections"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_weight="1"
-      android:text="Button 2"
+      android:hint="@string/_10_collections"
       android:textColor="#666666"
       app:cornerRadius="8dp"
       app:backgroundTint="@color/white2"
       app:rippleColor="@color/black"
-      android:layout_marginStart="8dp"/>
+      />
  </LinearLayout>
 
-
-
-
-
-
+ <ImageView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/shotsAndCollectionBtn"
+     android:layout_marginTop="8dp"
+     android:src="@drawable/shots"/>
+ </RelativeLayout>
 
 </RelativeLayout>
