@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@drawable/bg_img"
+    android:background="@drawable/bg_assign"
     tools:context=".ui.MainActivity">
 
  <TextView
@@ -79,7 +79,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="horizontal"
-      android:layout_marginEnd="50dp">
+      android:layout_marginEnd="40dp">
    <TextView
        android:id="@+id/tvFollowers"
        android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
   <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="50dp"
+      android:layout_marginStart="40dp"
       android:orientation="horizontal">
 
    <TextView
@@ -110,7 +110,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_marginEnd="8dp"
-       android:text="150"
+       android:text="140"
        android:textSize="18sp"
        android:textStyle="bold"
        android:textColor="@color/black"/>
@@ -126,6 +126,7 @@
  </LinearLayout>
 
  <LinearLayout
+     android:id="@+id/socialIconsContainer"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:layout_below="@id/followersFollowingContainer"
@@ -135,12 +136,12 @@
 
   <com.airbnb.lottie.LottieAnimationView
       android:id="@+id/tvWebsite"
-      android:layout_width="50dp"
-      android:layout_height="50dp"
-      android:layout_marginEnd="20dp"
+      android:layout_width="35dp"
+      android:layout_height="40dp"
+      android:layout_marginEnd="10dp"
       app:lottie_autoPlay="true"
       app:lottie_loop="true"
-      app:lottie_rawRes="@raw/ann" />
+      app:lottie_rawRes="@raw/browse" />
 
   <TextView
       android:layout_width="wrap_content"
@@ -151,14 +152,14 @@
       android:textStyle="bold"/>
 
   <com.airbnb.lottie.LottieAnimationView
-      android:id="@+id/animation_github"
-      android:layout_width="50dp"
-      android:layout_height="50dp"
-      android:layout_marginEnd="20dp"
-      android:layout_marginStart="20dp"
+      android:id="@+id/animation_instagram"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
       app:lottie_autoPlay="true"
       app:lottie_loop="true"
-      app:lottie_rawRes="@raw/github" />
+      app:lottie_rawRes="@raw/instagram" />
 
   <TextView
       android:layout_width="wrap_content"
@@ -167,16 +168,89 @@
       android:text="•"
       android:textSize="20sp"
       android:textStyle="bold"/>
+  
+  <com.airbnb.lottie.LottieAnimationView
+      android:id="@+id/animation_facebook"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      app:lottie_rawRes="@raw/facebook" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/blue"
+      android:text="•"
+      android:textSize="20sp"
+      android:textStyle="bold"/>
+  
   <com.airbnb.lottie.LottieAnimationView
       android:id="@+id/animation_twitter"
-      android:layout_width="50dp"
-      android:layout_height="50dp"
-      android:layout_marginStart="20dp"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
       app:lottie_autoPlay="true"
       app:lottie_loop="true"
       app:lottie_rawRes="@raw/twitter" />
 
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/blue"
+      android:text="•"
+      android:textSize="20sp"
+      android:textStyle="bold"/>
+  <com.airbnb.lottie.LottieAnimationView
+      android:id="@+id/animation_github"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginStart="10dp"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      app:lottie_rawRes="@raw/github" />
+
  </LinearLayout>
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:layout_below="@id/socialIconsContainer"
+     android:layout_marginTop="10dp"
+     android:gravity="center">
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/my_button"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Button 1"
+      app:cornerRadius="8dp"
+      android:textColor="@color/blue"
+      app:backgroundTint="@color/light_blue"
+      app:rippleColor="@color/black"
+      android:layout_marginEnd="8dp"/>
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/my"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="Button 2"
+      android:textColor="#666666"
+      app:cornerRadius="8dp"
+      app:backgroundTint="@color/white2"
+      app:rippleColor="@color/black"
+      android:layout_marginStart="8dp"/>
+ </LinearLayout>
+
+
+
+
+
 
 
 </RelativeLayout>

@@ -63,4 +63,6 @@ dependencies {
 
     // lottieAnimation
     implementation("com.airbnb.android:lottie:6.6.6")
+    // material button
+    implementation("com.google.android.material:material:1.11.0")
 }
