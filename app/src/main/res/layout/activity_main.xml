@@ -64,6 +64,7 @@
      android:layout_marginTop="8dp"/>
 
  <LinearLayout
+     android:id="@+id/followersFollowingContainer"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:layout_below="@id/tvLocation"
@@ -122,6 +123,25 @@
        android:textSize="14sp"
        android:textColor="#666666"/>
   </LinearLayout>
+ </LinearLayout>
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/followersFollowingContainer"
+     android:layout_marginTop="20dp"
+     android:gravity="center"
+     android:orientation="horizontal">
+
+  <com.airbnb.lottie.LottieAnimationView
+      android:id="@+id/animation_farmer"
+      android:layout_width="wrap_content"
+      android:layout_height="300dp"
+      android:layout_gravity="bottom"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      app:lottie_rawRes="@raw/farmer" />
+
  </LinearLayout>
 
 
