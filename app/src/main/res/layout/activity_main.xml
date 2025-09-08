@@ -81,7 +81,7 @@
       android:orientation="horizontal"
       android:layout_marginEnd="50dp">
    <TextView
-       android:id="@+id/tvFollowersCount"
+       android:id="@+id/tvFollowers"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="220"
@@ -106,7 +106,7 @@
       android:orientation="horizontal">
 
    <TextView
-       android:id="@+id/tvFollowingCount"
+       android:id="@+id/tvFollowing"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_marginEnd="8dp"
@@ -134,13 +134,47 @@
      android:orientation="horizontal">
 
   <com.airbnb.lottie.LottieAnimationView
-      android:id="@+id/animation_farmer"
-      android:layout_width="wrap_content"
-      android:layout_height="300dp"
-      android:layout_gravity="bottom"
+      android:id="@+id/tvWebsite"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_marginEnd="20dp"
       app:lottie_autoPlay="true"
       app:lottie_loop="true"
-      app:lottie_rawRes="@raw/farmer" />
+      app:lottie_rawRes="@raw/ann" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/blue"
+      android:text="•"
+      android:textSize="20sp"
+      android:textStyle="bold"/>
+
+  <com.airbnb.lottie.LottieAnimationView
+      android:id="@+id/animation_github"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_marginEnd="20dp"
+      android:layout_marginStart="20dp"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      app:lottie_rawRes="@raw/github" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/blue"
+      android:text="•"
+      android:textSize="20sp"
+      android:textStyle="bold"/>
+  <com.airbnb.lottie.LottieAnimationView
+      android:id="@+id/animation_twitter"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_marginStart="20dp"
+      app:lottie_autoPlay="true"
+      app:lottie_loop="true"
+      app:lottie_rawRes="@raw/twitter" />
 
  </LinearLayout>
 
