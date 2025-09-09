@@ -43,13 +43,12 @@ The app displays user profile information by fetching data from a static **JSON 
 1. Clone the project:
    ```bash
    git clone https://github.com/ujjaval01/Click-Retina-Assesment.git
-Open in Android Studio
+   
+2. Open in Android Studio
 
-Sync Gradle
+3. Sync Gradle
 
-Run the app on an emulator or a real device
-
-Downloadable Apk Link:-  https://drive.google.com/file/d/1ECxnZYioW1OseNbCuPT5KG2rfQQ54kLW/view?usp=drive_link
+4. Run the app on an emulator or a real device
 
 🎯 Notes
 JSON data is stored locally in the project.
@@ -60,3 +59,8 @@ GitHub link is hardcoded for demo purposes.
 
 📜 License
 This project was created as part of an assignment task.
+
+---
+Downloadable APK Link:
+ ```bash
+ https://drive.google.com/file/d/1hrGhrLbQp8khabhNfgk1T4Dr47NFtHYd/view?usp=drive_link
