@@ -29,21 +29,6 @@ The app displays user profile information by fetching data from a static **JSON 
 
 ---
 
-## 📂 Project Structure
-app/
-├── data/
-│ └── model/ # Data models (User, Social, Stats, etc.)
-├── ui/
-│ ├── MainActivity.kt
-│ ├── SplashActivity.kt
-│ └── viewmodel/ # UserViewModel
-├── res/
-│ ├── layout/ # App layouts
-│ ├── drawable/ # Backgrounds & icons
-│ └── raw/ # Lottie JSON animations
-
----
-
 ## ⚡ Setup & Run
 1. Clone the project:
    ```bash
@@ -52,9 +37,9 @@ Open in Android Studio
 
 Sync Gradle
 
-Run the app on an emulator or real device
+Run the app on an emulator or a real device
 
-Apk Link:-  https://drive.google.com/file/d/1ECxnZYioW1OseNbCuPT5KG2rfQQ54kLW/view?usp=drive_link
+Downloadable Apk Link:-  https://drive.google.com/file/d/1ECxnZYioW1OseNbCuPT5KG2rfQQ54kLW/view?usp=drive_link
 
 🎯 Notes
 JSON data is stored locally in the project.
