@@ -39,18 +39,16 @@ class MainActivity : AppCompatActivity() {
                 binding.progressBar.visibility = View.GONE
                 binding.mainContent.visibility = View.VISIBLE
 
-                // Basic Info
                 binding.tvName.text = user.name
                 binding.tvUsername.text = user.username
                 binding.tvLocation.text = "${user.location.city}, ${user.location.country}"
 
-                // Statistics
+
                 binding.tvFollowers.text = "${user.statistics.followers}"
                 binding.tvFollowing.text = "${user.statistics.following}"
                 binding.tvShots.text = "${user.statistics.activity.shots} Shots"
                 binding.tvCollections.text = "${user.statistics.activity.collections} Collections"
 
-                // Avatar
                 Glide.with(this)
                     .load(user.avatar)
                     .into(binding.ivAvatar)
@@ -61,7 +59,6 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
-                // Social Profiles (Instagram, Facebook only)
                 user.social.profiles.forEach { profile ->
                     when (profile.platform.lowercase()) {
                         "instagram" -> {
