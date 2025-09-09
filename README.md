@@ -29,6 +29,16 @@ The app displays user profile information by fetching data from a static **JSON 
 
 ---
 
+## Screenshots
+<img width="1920" height="1080" alt="photo_collage png" src="https://github.com/user-attachments/assets/ff23137c-3f0d-4bf8-833c-92d0db0ee379" />
+
+
+
+
+
+
+---
+
 ## ⚡ Setup & Run
 1. Clone the project:
    ```bash
